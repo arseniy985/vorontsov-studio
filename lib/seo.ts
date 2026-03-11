@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/site-config';
 const defaultTitle = 'Vorontsov Labs | Разработка сайтов, AI и SEO для роста бизнеса';
 const defaultDescription =
   'Vorontsov Labs проектирует и запускает сайты, AI-автоматизацию, мобильные продукты и SEO-системы, которые помогают бизнесу получать больше заявок и быстрее расти.';
-const defaultOgImage = '/opengraph-image';
+const defaultOgImage = '/opengraph-image?v=20260311-1';
 
 export const siteUrl = 'https://vorontsovlabs.ru';
 
