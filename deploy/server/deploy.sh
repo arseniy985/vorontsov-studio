@@ -4,4 +4,4 @@ set -euo pipefail
 REPO_DIR="${REPO_DIR:-/opt/vorontsov-studio}"
 
 cd "${REPO_DIR}"
-docker compose up -d --build
+docker compose up -d --build --force-recreate
