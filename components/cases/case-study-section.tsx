@@ -34,16 +34,16 @@ export function CaseStudySection({ caseStudy }: CaseStudySectionProps) {
           className="h-[3px] origin-left bg-accent"
         />
 
-        <div className="grid gap-8 px-6 py-8 md:px-10 md:py-10 xl:grid-cols-[minmax(0,1fr)_minmax(320px,420px)] xl:gap-12">
+        <div className="grid gap-8 px-6 py-8 md:px-10 md:py-10 xl:grid-cols-[minmax(0,1fr)_minmax(320px,396px)] xl:gap-10 2xl:grid-cols-[minmax(0,1fr)_minmax(340px,420px)] 2xl:gap-12">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="min-w-0 xl:pr-4"
+            className="min-w-0 xl:pr-2 2xl:pr-4"
           >
             <div className="max-w-[44rem]">
-              <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end">
+              <div className="mb-8 grid gap-5 md:grid-cols-[auto_minmax(0,1fr)] md:items-end">
                 <span className="font-display text-6xl font-bold uppercase tracking-[-0.08em] text-accent md:text-8xl">
                   {caseStudy.index}
                 </span>
@@ -51,7 +51,7 @@ export function CaseStudySection({ caseStudy }: CaseStudySectionProps) {
                   <p className="text-sm font-semibold uppercase tracking-[0.32em] text-accent/80">
                     {caseStudy.industry}
                   </p>
-                  <h2 className="mt-2 max-w-[11ch] text-4xl font-display font-bold uppercase leading-[0.88] tracking-[-0.06em] text-ink md:text-5xl xl:text-[4.35rem]">
+                  <h2 className="mt-2 max-w-[9ch] text-4xl font-display font-bold uppercase leading-[0.88] tracking-[-0.06em] text-ink break-words md:max-w-[10ch] md:text-5xl xl:max-w-[8ch] xl:text-[3.7rem] 2xl:max-w-[9ch] 2xl:text-[4.2rem]">
                     {caseStudy.client}
                   </h2>
                 </div>
