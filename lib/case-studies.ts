@@ -3,6 +3,7 @@ export type CaseStudy = {
   index: string;
   industry: string;
   client: string;
+  displayTitle?: string[];
   summary: string;
   technologies: string[];
   highlights: string[];
@@ -20,6 +21,7 @@ export const caseStudies: CaseStudy[] = [
     index: '01',
     industry: 'Food Production',
     client: 'Dairy Spring',
+    displayTitle: ['Dairy', 'Spring'],
     summary:
       'Сайт бренда Dairy Spring для «Сут Булак»: презентация компании, линейка сыров и молочной продукции, многоязычная структура (ru/kg/en), отдельные страницы продуктов и контактов, а также раздел фирменного магазина.',
     technologies: ['Laravel', 'Livewire', 'Filament', 'MySQL', 'Redis'],
@@ -37,6 +39,7 @@ export const caseStudies: CaseStudy[] = [
     index: '02',
     industry: 'Logistics',
     client: 'DUMA Shipping',
+    displayTitle: ['DUMA', 'Shipping'],
     summary:
       'Маркетинговый сайт и рабочий shipping-калькулятор для freight/package delivery: маршруты по штатам, расчет стоимости, подтверждение состава отправки и оформление заказа с поддержкой Stripe, Zelle и Cash. Также реализована функциональная мультиролевая админка (водитель, менеджер, супер-админ, диспетчер) и live-отслеживание водителя через мобильное приложение.',
     technologies: ['Next.js', 'Python (FastAPI)', 'PostgreSQL', 'Redis', 'Stripe API'],
@@ -54,6 +57,7 @@ export const caseStudies: CaseStudy[] = [
     index: '03',
     industry: 'Manufacturing',
     client: 'Балтийский Камнеобрабатывающий Завод',
+    displayTitle: ['Балтийский', 'Камнезавод'],
     summary:
       'Лендинг с оффером для B2B-клиентов: прайс-листы, формы заявок, каталог изделий из гранита, блоки кейсов и логистики по РФ, а также секции для архитекторов и строительных компаний.',
     technologies: ['Laravel', 'Livewire', 'Filament', 'MySQL', 'Tilda Integrations'],
@@ -71,6 +75,7 @@ export const caseStudies: CaseStudy[] = [
     index: '04',
     industry: 'EventTech SaaS',
     client: 'Flysupa',
+    displayTitle: ['Flysupa'],
     summary:
       'Интеллектуальная EventTech-платформа, где команда управляет подготовкой мероприятий через AI-чат. Ассистент на базе LangChain понимает запрос на естественном языке, собирает план события, координирует задачи и помогает довести организацию до результата в одном диалоговом интерфейсе.',
     technologies: ['Next.js', 'MongoDB Atlas', 'Payload CMS', 'LangChain', 'OpenAI API'],

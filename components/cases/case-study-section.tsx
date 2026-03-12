@@ -11,6 +11,7 @@ type CaseStudySectionProps = {
 export function CaseStudySection({ caseStudy }: CaseStudySectionProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const shouldReduceMotion = useReducedMotion();
+  const displayTitle = caseStudy.displayTitle ?? [caseStudy.client];
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start end', 'end start'],
@@ -51,8 +52,12 @@ export function CaseStudySection({ caseStudy }: CaseStudySectionProps) {
                   <p className="text-sm font-semibold uppercase tracking-[0.32em] text-accent/80">
                     {caseStudy.industry}
                   </p>
-                  <h2 className="mt-2 max-w-[9ch] text-4xl font-display font-bold uppercase leading-[0.88] tracking-[-0.06em] text-ink break-words md:max-w-[10ch] md:text-5xl xl:max-w-[8ch] xl:text-[3.7rem] 2xl:max-w-[9ch] 2xl:text-[4.2rem]">
-                    {caseStudy.client}
+                  <h2 className="mt-2 max-w-[12ch] text-4xl font-display font-bold uppercase leading-[0.88] tracking-[-0.06em] text-ink md:text-5xl xl:text-[3.6rem] 2xl:text-[4.15rem]">
+                    {displayTitle.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
                   </h2>
                 </div>
               </div>
